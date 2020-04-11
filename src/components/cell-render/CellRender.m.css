@@ -1,0 +1,22 @@
+.cell {
+  border: 0px solid #000;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  border-left-width: 1px;
+}
+
+.right {
+  border-right-width: 1px;
+}
+
+.top {
+  border-top-width: 1px;
+}
+
+.bottom {
+  border-bottom-width: 1px;
+}
