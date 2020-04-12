@@ -6,11 +6,15 @@ import GridRender from './components/grid-render/GridRender';
 
 import * as css from './App.m.css';
 import Grid from './domain/Grid';
+import Sidewinder from './domain/generators/sidewinder';
 
 const factory = create({ theme });
 
 export default factory(function App({ middleware: { theme } }) {
   const grid = new Grid(20, 20);
+
+  const generator = new Sidewinder();
+  generator.generate(grid);
 
   return (
     <div classes={[css.root]}>

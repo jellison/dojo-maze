@@ -19,10 +19,10 @@ export default class Grid {
       for (let column = 0; column < columns; column++) {
         const cell = this.cells[row][column];
 
-        if (row > 0) cell.north = this.cells[row - 1][column];
-        if (row < this.rows - 1) cell.south = this.cells[row + 1][column];
-        if (column > 0) cell.east = this.cells[row][column - 1];
-        if (column < this.columns - 1) cell.west = this.cells[row][column + 1];
+        if (row > 0) cell.south = this.cells[row - 1][column];
+        if (row < this.rows - 1) cell.north = this.cells[row + 1][column];
+        if (column > 0) cell.west = this.cells[row][column - 1];
+        if (column < this.columns - 1) cell.east = this.cells[row][column + 1];
       }
     }
   }

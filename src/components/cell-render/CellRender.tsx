@@ -17,10 +17,10 @@ export default factory(function CellRender({ properties }) {
     <div
       key="root"
       classes={createClassArray(css.cell, {
-        [css.left]: !cell.east || cell.linkedTo(cell.east),
-        [css.right]: !cell.west,
-        [css.top]: !cell.north || cell.linkedTo(cell.north),
-        [css.bottom]: !cell.south,
+        [css.left]: !cell.west || !cell.linkedTo(cell.west),
+        [css.right]: !cell.east,
+        [css.top]: !cell.north || !cell.linkedTo(cell.north),
+        [css.bottom]: !cell.south
       })}
     />
   );
