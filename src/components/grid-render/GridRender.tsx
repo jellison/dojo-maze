@@ -15,11 +15,11 @@ const factory = create({ resize, dimensions }).properties<GridRenderProperties>(
 export default factory(function GridRender({ middleware: { resize, dimensions }, properties }) {
   resize.get('root');
   const { grid } = properties();
-  const cellSize = dimensions.get('root').size.width / grid.columns;
+  const cellSize = dimensions.get('root').size.width / grid.columnCount;
 
   return (
     <div key="root" classes={css.root}>
-      {grid.cells.reverse().map((row) => (
+      {grid.rows.reverse().map((row) => (
         <div classes={css.row}>
           {row.map((cell) => (
             <div classes={css.cell} styles={{ height: `${cellSize}px`, width: `${cellSize}px` }}>

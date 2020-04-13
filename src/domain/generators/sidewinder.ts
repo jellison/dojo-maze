@@ -5,7 +5,7 @@ import { choose, sample } from '../Random';
 
 export default class Sidewinder implements Generator {
   generate(grid: Grid) {
-    for (let row of grid.cells) {
+    for (let row of grid.rows) {
       let run: Cell[] = [];
 
       for (let cell of row) {
