@@ -23,7 +23,7 @@ export default factory(function GridRender({ middleware: { resize, dimensions },
         <div classes={css.row}>
           {row.map((cell) => (
             <div classes={css.cell} styles={{ height: `${cellSize}px`, width: `${cellSize}px` }}>
-              <CellRender cell={cell} />
+              <CellRender cell={cell} start={grid.start === cell} end={grid.end === cell} />
             </div>
           ))}
         </div>

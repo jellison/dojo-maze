@@ -6,12 +6,14 @@ import * as css from './CellRender.m.css';
 
 export interface CellRenderProperties {
   cell: Cell;
+  start: boolean;
+  end: boolean;
 }
 
 const factory = create().properties<CellRenderProperties>();
 
 export default factory(function CellRender({ properties }) {
-  const { cell } = properties();
+  const { cell, start, end } = properties();
 
   return (
     <div
@@ -20,7 +22,9 @@ export default factory(function CellRender({ properties }) {
         [css.left]: !cell.west || !cell.linkedTo(cell.west),
         [css.right]: !cell.east,
         [css.top]: !cell.north || !cell.linkedTo(cell.north),
-        [css.bottom]: !cell.south
+        [css.bottom]: !cell.south,
+        [css.start]: start,
+        [css.end]: end
       })}
     />
   );
