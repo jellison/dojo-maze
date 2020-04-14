@@ -6,15 +6,15 @@ import GridRender from './components/grid-render/GridRender';
 
 import * as css from './App.m.css';
 import Grid from './domain/Grid';
-// import Sidewinder from './domain/generators/sidewinder';
-import { AldousBroder } from './domain/generators/aldous-broder';
+
+import Wilsons from './domain/generators/wilsons';
 
 const factory = create({ theme });
 
 export default factory(function App({ middleware: { theme } }) {
   const grid = new Grid(20, 20);
 
-  const generator = new AldousBroder();
+  const generator = new Wilsons();
   generator.generate(grid);
 
   return (

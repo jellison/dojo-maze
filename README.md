@@ -4,6 +4,10 @@ Maze generation in Dojo and TypeScript. Implementations based on the book ["Maze
 
 ## Maze Algorithms
 
+Wilson's
+
+![Wilsons](samples/wilsons.png)
+
 Aldous-Broder
 
 ![AldousBroder](samples/aldous-broder.png)

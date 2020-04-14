@@ -11,3 +11,8 @@ export function choose(choices?: number): boolean | number {
 export function sample<T>(values: T[]): T {
   return values[choose(values.length) - 1];
 }
+
+export function sampleAndRemove<T>(values: T[]): T {
+  const index = choose(values.length) - 1;
+  return values.splice(index, 1)[0];
+}
