@@ -1,8 +1,12 @@
-import Generator from './generator';
+import IGenerator from './generator';
 import Grid from '../Grid';
 import { sampleAndRemove, sample } from '../Random';
+import { v4 as uuid } from 'uuid';
 
-export default class Wilsons implements Generator {
+export default class Wilsons implements IGenerator {
+  public id: string = uuid();
+  public name: string = 'Wilsons';
+
   public generate(grid: Grid) {
     const unvisited = [...grid.cells];
 
@@ -28,5 +32,7 @@ export default class Wilsons implements Generator {
         unvisited.splice(unvisited.indexOf(path[i]), 1);
       }
     }
+
+    return grid;
   }
 }

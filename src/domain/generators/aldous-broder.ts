@@ -1,8 +1,12 @@
-import Generator from './generator';
+import IGenerator from './generator';
 import Grid from '../Grid';
 import { sample } from '../Random';
+import { v4 as uuid } from 'uuid';
 
-export class AldousBroder implements Generator {
+export class AldousBroder implements IGenerator {
+  public id: string = uuid();
+  public name: string = 'Aldous Broder';
+
   generate(grid: Grid) {
     let current = sample(grid.cells);
     let unvisited = grid.rowCount * grid.columnCount - 1;
@@ -17,5 +21,7 @@ export class AldousBroder implements Generator {
 
       current = neighbor;
     }
+
+    return grid;
   }
 }

@@ -17,8 +17,10 @@
     "@dojo/cli-build-app": "^6.0.0",
     "@dojo/cli-test-intern": "^6.0.0",
     "@types/node": "~9.6.5",
+    "@types/uuid": "^7.0.2",
     "bulma": "^0.8.1",
     "prettier": "^2.0.4",
-    "typescript": "~3.4.5"
+    "typescript": "~3.4.5",
+    "uuid": "^7.0.3"
   }
 }

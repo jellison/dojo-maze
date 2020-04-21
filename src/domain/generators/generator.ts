@@ -1,5 +1,8 @@
 import Grid from '../Grid';
 
-export default interface Generator {
-  generate(grid: Grid): void;
+export default interface IGenerator {
+  id: string;
+  name: string;
+
+  generate(grid: Grid): Grid;
 }

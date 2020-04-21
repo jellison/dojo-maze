@@ -1,1 +1,18 @@
 @import '../node_modules/bulma/css/bulma.css';
+
+.form {
+  margin: 20px 0;
+}
+
+/* FIELD ROW */
+.field-row {
+  display: flex;
+}
+
+.field-row .field.is-horizontal .field-label {
+  flex-grow: 0;
+}
+
+.field-row .field + .field {
+  margin-left: 12px;
+}
